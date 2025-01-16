@@ -55,3 +55,15 @@
     justify-content: space-between;
     width: 100%;
 }
+.addBtn{
+    background-color: #fff;
+    border: 1px solid #333;
+    color: #333;
+    width: 70px;
+    height: 36px;
+    font-weight: 600;
+}
+.addBtn:hover {
+    background-color: #c0c0c0;
+    border: none;
+}

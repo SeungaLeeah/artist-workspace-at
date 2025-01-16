@@ -3,11 +3,19 @@ import styles from './join.module.css';
 import Input from "../../components/input";
 import Button from "../../components/button";
 import {useRouter} from "next/router";
+import SelectBox from '../../components/selectBox';
 
 const index = () => {
     const [password, setPassword] = useState('');
     const [checkPassword, setCheckPassword] = useState('');
     const router = useRouter();
+    const [selectedOption, setSelectedOption] = useState<string>('');
+
+    const handleChange = (value: string) => {
+        setSelectedOption(value);
+    };
+
+    const options = ['Option 1', 'Option 2', 'Option 3'];
 
     const handlePwChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(e.target.value);
@@ -106,12 +114,25 @@ const index = () => {
                 <div className={'w-100 mg-bt-10'}>
                     <div className={'fs-14 semi-bold mg-bt-8'}>SNS</div>
                     <div>
-                        <div>
+                        <div className={'fx-row'}>
+                            <SelectBox
+                                options={options}
+                                value={selectedOption}
+                                onChange={handleChange}
+                                placeHolder="직접입력"
+                            />
                             <Input
                                 type="text"
                                 value={checkPassword}
                                 onChange={handleCheckPwChange}
                             />
+                            <Button
+                                onClick={cancelBtn}
+                                fontSize={'14px'}
+                                className={`${styles.addBtn} mg-rt-4`}
+                            >
+                                {'추가'}
+                            </Button>
                         </div>
                         <div>
                             <Input
