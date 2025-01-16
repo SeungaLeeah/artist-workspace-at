@@ -1,0 +1,198 @@
+/* Thin */
+@font-face {
+    font-family: "Pretendard";
+    src: url("../fonts/Pretendard-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* ExtraLight */
+@font-face {
+    font-family: "Pretendard";
+    src: url("../fonts/Pretendard-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Light */
+@font-face {
+    font-family: "Pretendard";
+    src: url("../fonts/Pretendard-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Regular */
+@font-face {
+    font-family: "Pretendard";
+    src: url("../fonts/Pretendard-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Medium */
+@font-face {
+    font-family: "Pretendard";
+    src: url("../fonts/Pretendard-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* SemiBold */
+@font-face {
+    font-family: "Pretendard";
+    src: url("../fonts/Pretendard-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: "Pretendard";
+    src: url("../fonts/Pretendard-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ExtraBold */
+@font-face {
+    font-family: "Pretendard";
+    src: url("../fonts/Pretendard-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Black */
+@font-face {
+    font-family: "Pretendard";
+    src: url("../fonts/Pretendard-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Thin */
+.thin {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 100;
+}
+
+/* ExtraLight */
+.extra-light {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 200;
+}
+
+/* Light */
+.light {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 300;
+}
+
+/* Regular */
+.regular {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 400;
+}
+
+/* Medium */
+.medium {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 500;
+}
+
+/* SemiBold */
+.semi-bold {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 600;
+}
+
+/* Bold */
+.bold {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 700;
+}
+
+/* ExtraBold */
+.extra-bold {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 800;
+}
+
+/* Black */
+.black {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 900;
+}
+
+.fs-10{
+    font-size: 10px;
+}
+.fs-12{
+    font-size: 12px;
+}
+.fs-13{
+    font-size: 13px;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fs-15{
+    font-size: 15px;
+}
+.fs-16{
+    font-size: 16px;
+}
+.fs-18{
+    font-size: 18px;
+}
+.fs-20{
+    font-size: 20px;
+}
+.fs-22{
+    font-size: 22px;
+}
+.fs-24{
+    font-size: 24px;
+}
+.fs-26{
+    font-size: 26px;
+}
+.fs-28{
+    font-size: 28px;
+}
+.fs-30{
+    font-size: 30px;
+}
+.fs-32{
+    font-size: 32px;
+}
+.fs-34{
+    font-size: 34px;
+}
+.fs-36{
+    font-size: 36px;
+}
+.fs-38{
+    font-size: 38px;
+}
+.fs-40{
+    font-size: 40px;
+}
+.fs-42{
+    font-size: 42px;
+}
+.fs-44{
+    font-size: 44px;
+}
+.fs-46{
+    font-size: 46px;
+}
+.fs-48{
+    font-size: 48px;
+}
+.fs-60{
+    font-size: 60px;
+}
+.fs-62{
+    font-size: 62px;
+}
