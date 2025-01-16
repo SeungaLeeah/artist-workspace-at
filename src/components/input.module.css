@@ -1,0 +1,46 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLabel {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.inputField {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.inputField:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.inputError {
+    border-color: red;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 12px;
+}
+
+.required {
+    color: red;
+}
+.placeholder{
+    font-family: "Pretendard", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.text{
+    font-family: "Pretendard", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}

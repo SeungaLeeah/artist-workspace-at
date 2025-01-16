@@ -1,0 +1,41 @@
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.buttonBg{
+    background-color: #e5e5e5;
+    border-color: #004085;
+}
+
+.buttonBg:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.buttonBg.disabled {
+    background-color: #c0c0c0;
+    border-color: #c0c0c0;
+    cursor: not-allowed;
+}
+
+.button-bg.loading {
+    background-color: #f0f0f0;
+    cursor: wait;
+}
+
+.loadingSpinner {
+    border: 2px solid transparent;
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
