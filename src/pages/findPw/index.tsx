@@ -29,7 +29,7 @@ const index = () => {
             <div className={'loginBox'}>
                 <div className={`mg-bt-13 fs-20 bold pd-bt-4 ${styles.title}`}>비밀번호 변경하기
                 </div>
-                <div className={'width100 mg-bt-10'}>
+                <div className={'w-100 mg-bt-10'}>
                     <Input
                         label={'새 비밀번호'}
                         type="password"
@@ -38,7 +38,7 @@ const index = () => {
                         placeholder="문자+특수문자+숫자 포함(최소 8자 최대 16자리)"
                     />
                 </div>
-                <div className={'width100 mg-bt-10'}>
+                <div className={'w-100 mg-bt-10'}>
                     <Input
                         label={'새 비밀번호 확인'}
                         type="password"

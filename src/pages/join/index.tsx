@@ -17,34 +17,117 @@ const index = () => {
     };
 
 
-    const cancelBtn =  () => {
+    const cancelBtn = () => {
         router.push(`/`);
     };
-    const findPwClick =  () => {
+    const findPwClick = () => {
         console.log('id 찾기')
     };
 
     return (
-        <div className={`${styles.loginWrap}`}>
-            <div className={'loginBox'}>
-                <div className={`mg-bt-13 fs-20 bold pd-bt-4 ${styles.title}`}>비밀번호 변경하기
+        <div className={`${styles.joinWrap}`}>
+            <div className={`${styles.joinBox}`}>
+                <div className={`mg-bt-13 fs-20 bold pd-bt-4 ${styles.title}`}>회원가입
                 </div>
-                <div className={'width100 mg-bt-10'}>
+                <div className={'w-100 mg-bt-10'}>
                     <Input
-                        label={'새 비밀번호'}
-                        type="password"
+                        label={'실명'}
+                        type="text"
                         value={password}
                         onChange={handlePwChange}
-                        placeholder="문자+특수문자+숫자 포함(최소 8자 최대 16자리)"
                     />
                 </div>
-                <div className={'width100 mg-bt-10'}>
+                <div className={'w-100 mg-bt-10'}>
                     <Input
-                        label={'새 비밀번호 확인'}
-                        type="password"
+                        label={'작가명'}
+                        type="text"
                         value={checkPassword}
                         onChange={handleCheckPwChange}
                     />
+                </div>
+                <div className={'w-100 mg-bt-10'}>
+                    <div className={'fs-14 semi-bold mg-bt-8'}>아이디</div>
+                    <div className={'fx-space-between'}>
+                        <Input
+                            type="text"
+                            value={password}
+                            onChange={handlePwChange}
+                        />
+                        <Button
+                            onClick={findPwClick}
+                            className={`${styles.checkBtn} mg-lf-4`}
+                        >
+                            {'중복확인'}
+                        </Button>
+                    </div>
+                </div>
+                <div className={'w-100 mg-bt-10'}>
+                    <Input
+                        label={'비밀번호'}
+                        type="text"
+                        value={checkPassword}
+                        onChange={handleCheckPwChange}
+                    />
+                </div>
+                <div className={'w-100 mg-bt-10'}>
+                    <Input
+                        label={'비밀번호 확인'}
+                        type="text"
+                        value={password}
+                        onChange={handlePwChange}
+                    />
+                </div>
+                <div className={'w-100 mg-bt-10'}>
+                    <div className={'fs-14 semi-bold mg-bt-8'}>이메일</div>
+                    <div className={'fx-space-between'}>
+                        <Input
+                            type="text"
+                            value={checkPassword}
+                            onChange={handleCheckPwChange}
+                        />
+                    </div>
+                </div>
+                <div className={'w-100 mg-bt-10'}>
+                    <Input
+                        label={'휴대폰 번호'}
+                        type="text"
+                        value={checkPassword}
+                        onChange={handleCheckPwChange}
+                    />
+                </div>
+                <div className={'w-100 mg-bt-10'}>
+                    <Input
+                        label={'홈페이지 명'}
+                        type="text"
+                        value={checkPassword}
+                        onChange={handleCheckPwChange}
+                    />
+                </div>
+                <div className={'w-100 mg-bt-10'}>
+                    <div className={'fs-14 semi-bold mg-bt-8'}>SNS</div>
+                    <div>
+                        <div>
+                            <Input
+                                type="text"
+                                value={checkPassword}
+                                onChange={handleCheckPwChange}
+                            />
+                        </div>
+                        <div>
+                            <Input
+                                type="text"
+                                value={checkPassword}
+                                onChange={handleCheckPwChange}
+                            />
+                        </div>
+                        <div>
+                            <Input
+                                type="text"
+                                value={checkPassword}
+                                onChange={handleCheckPwChange}
+                            />
+                        </div>
+                    </div>
                 </div>
                 <div className={`mg-tp-14 ${styles.btnWrap}`}>
                     <Button

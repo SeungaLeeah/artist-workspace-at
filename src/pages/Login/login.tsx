@@ -31,7 +31,7 @@ const Login = () => {
             <div className={'loginBox'}>
                 <div className={`mg-bt-13 fs-20 bold pd-bt-4 ${styles.title}`}>로그인
                 </div>
-                <div className={'width100 mg-bt-10'}>
+                <div className={'w-100 mg-bt-10'}>
                     <Input
                         type="email"
                         value={email}
@@ -39,7 +39,7 @@ const Login = () => {
                         placeholder="이메일을 입력하세요"
                     />
                 </div>
-                <div className={'width100 mg-bt-10'}>
+                <div className={'w-100 mg-bt-10'}>
                     <Input
                         type="password"
                         value={password}

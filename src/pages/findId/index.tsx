@@ -25,7 +25,7 @@ const index = () => {
             <div className={'loginBox'}>
                 <div className={`mg-bt-13 fs-20 bold pd-bt-4 ${styles.title}`}>아이디 찾기
                 </div>
-                <div className={'width100 mg-bt-10'}>
+                <div className={'w-100 mg-bt-10'}>
                 <Input
                         type="email"
                         value={email}

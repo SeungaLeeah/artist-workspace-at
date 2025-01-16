@@ -1,4 +1,4 @@
-.loginWrap{
+.joinWrap{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -11,21 +11,26 @@
     width: 100%;
     border-bottom: 1px solid #999999;
 }
-
-.loginButton{
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-    border: 1px solid #007bff;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+.joinBox{
+    min-width: 500px;
 }
+.checkBtn{
+    background-color: #000;
+    color: white;
+    width: 100px;
+    height: 36px;
+    border: none;
+}
+.checkBtn:hover {
+    background-color: #c0c0c0;
+    border: none;
+}
+
 .loginBtn{
     background-color: #000;
     color: white;
     width: 100%;
+    height: 42px;
     border: none;
 }
 .loginBtn:hover {

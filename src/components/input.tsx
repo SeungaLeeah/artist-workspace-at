@@ -6,6 +6,7 @@ interface InputProps {
     onChange: (event: ChangeEvent<HTMLInputElement>) => void;
     placeholder?: string;
     disabled?: boolean;
+    successText?:string;
     errorText?: string;
     label?: string;
     name?: string;
@@ -20,6 +21,7 @@ const Input: React.FC<InputProps> = ({
     value,
     placeholder,
     disabled = false,
+    successText,
     errorText,
     label,
     name,
@@ -47,6 +49,7 @@ const Input: React.FC<InputProps> = ({
                 required={required}
                 autoFocus={autoFocus}
             />
+            {successText && <span className={`${styles.errorMessage}`}>{successText}</span>}
             {errorText && <span className={`${styles.errorMessage}`}>{errorText}</span>}
         </div>
     );
