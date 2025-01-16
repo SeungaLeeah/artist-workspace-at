@@ -1,0 +1,60 @@
+.loginWrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    border-bottom: 1px solid #999999;
+}
+.loginBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 90px 200px;
+    flex-direction: column;
+}
+.loginButton{
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.loginBtn{
+    background-color: #000;
+    color: white;
+    width: 100%;
+    border: none;
+}
+.loginBtn:hover {
+    background-color: #c0c0c0;
+    border: none;
+}
+.loginInfo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    color: #999999;
+    margin-bottom: 18px;
+}
+
+.lfLine{
+    border-left: 1px solid #999999;
+}
+.btnWrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
