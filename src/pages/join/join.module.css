@@ -4,10 +4,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px 0;
 }
 .title{
-    display: flex;
-    justify-content: left;
     width: 100%;
     border-bottom: 1px solid #999999;
 }
@@ -17,7 +16,7 @@
 .checkBtn{
     background-color: #000;
     color: white;
-    width: 100px;
+    width: 90px;
     height: 36px;
     border: none;
 }
@@ -52,15 +51,13 @@
 .btnWrap{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
 }
 .addBtn{
     background-color: #fff;
     border: 1px solid #333;
     color: #333;
-    width: 70px;
-    height: 36px;
     font-weight: 600;
 }
 .addBtn:hover {

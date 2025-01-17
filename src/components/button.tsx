@@ -8,7 +8,9 @@ interface ButtonProps {
     disabled?: boolean;
     children: React.ReactNode;
     loading?: boolean;
-    fontSize?:string
+    fontSize?:string;
+    height?: string;
+    width?:string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,13 +20,15 @@ const Button: React.FC<ButtonProps> = ({
         disabled = false,
         children,
         loading = false,
-        fontSize='16px'
+        fontSize='14px',
+        height='36px',
+        width='100px'
     }) => {
     return (
         <button
             type={type}
             onClick={onClick}
-            style={{fontSize:fontSize}}
+            style={{fontSize:fontSize, height:height, width:width}}
             className={`${styles.button} ${loading ? `${styles.loading}` : ''} ${disabled ? `${styles.disabled}` : ''} ${className ? className : styles.buttonBg}`}
             disabled={disabled || loading}
         >

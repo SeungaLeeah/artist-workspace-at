@@ -10,6 +10,7 @@ interface SelectBoxProps {
     className?: string;
     height?: string;
     placeHolder?: string;
+    width?:string;
 }
 
 const selectBox: React.FC<SelectBoxProps> = ({
@@ -20,10 +21,11 @@ const selectBox: React.FC<SelectBoxProps> = ({
     disabled,
     className = '',
     height = '36px',
-    placeHolder
+    placeHolder,
+    width='100px'
 }) => {
     return (
-        <div style={{height: height}} className={`${styles.selectBox} ${className}`}>
+        <div style={{height: height, width:width}} className={`${styles.selectBox} ${className}`}>
             <select
                 className={`${styles.select}`}
                 value={value}

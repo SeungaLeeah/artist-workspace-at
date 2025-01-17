@@ -35,7 +35,9 @@ const index = () => {
     return (
         <div className={`${styles.joinWrap}`}>
             <div className={`${styles.joinBox}`}>
-                <div className={`mg-bt-13 fs-20 bold pd-bt-4 ${styles.title}`}>회원가입
+                <div className={`mg-bt-13 fs-20 pd-bt-4 fx-space-between ${styles.title}`}>
+                    <div className={'bold'}>회원가입</div>
+                    <div className={'thin fs-10'}><span className={'red'}>* </span>표시된 항목은 필수 입력 항목입니다.</div>
                 </div>
                 <div className={'w-100 mg-bt-10'}>
                     <Input
@@ -60,10 +62,13 @@ const index = () => {
                             type="text"
                             value={password}
                             onChange={handlePwChange}
+                            className={'w-100'}
+                            placeholder="16자 미만으로 작성이 가능합니다"
                         />
                         <Button
                             onClick={findPwClick}
-                            className={`${styles.checkBtn} mg-lf-4`}
+                            fontSize={'14px'}
+                            className={`mg-lf-4 ${styles.addBtn}`}
                         >
                             {'중복확인'}
                         </Button>
@@ -75,6 +80,7 @@ const index = () => {
                         type="text"
                         value={checkPassword}
                         onChange={handleCheckPwChange}
+                        placeholder="문자+특수문자+숫자 포함(최소 8자 최대 16자리)"
                     />
                 </div>
                 <div className={'w-100 mg-bt-10'}>
@@ -89,18 +95,28 @@ const index = () => {
                     <div className={'fs-14 semi-bold mg-bt-8'}>이메일</div>
                     <div className={'fx-space-between'}>
                         <Input
+                            className={'w-100'}
                             type="text"
                             value={checkPassword}
                             onChange={handleCheckPwChange}
+                        />
+                        <SelectBox
+                            options={options}
+                            value={selectedOption}
+                            onChange={handleChange}
+                            placeHolder="직접입력"
+                            className={`mg-lf-8`}
+                            width={'200px'}
                         />
                     </div>
                 </div>
                 <div className={'w-100 mg-bt-10'}>
                     <Input
                         label={'휴대폰 번호'}
-                        type="text"
+                        type="tel"
                         value={checkPassword}
                         onChange={handleCheckPwChange}
+                        placeholder="'-'없이 작성해주세요"
                     />
                 </div>
                 <div className={'w-100 mg-bt-10'}>
@@ -113,40 +129,39 @@ const index = () => {
                 </div>
                 <div className={'w-100 mg-bt-10'}>
                     <div className={'fs-14 semi-bold mg-bt-8'}>SNS</div>
-                    <div>
-                        <div className={'fx-row'}>
-                            <SelectBox
-                                options={options}
-                                value={selectedOption}
-                                onChange={handleChange}
-                                placeHolder="직접입력"
-                            />
-                            <Input
-                                type="text"
-                                value={checkPassword}
-                                onChange={handleCheckPwChange}
-                            />
+
+                    <div className={'fx-space-between'}>
+                        <SelectBox
+                            options={options}
+                            value={selectedOption}
+                            onChange={handleChange}
+                            placeHolder="직접입력"
+                            width={'33.3%'}
+                        />
+                        <Input
+                            type="text"
+                            value={checkPassword}
+                            onChange={handleCheckPwChange}
+                            placeholder="아이디"
+
+                        />
+                        <div style={{width: '26%'}} className={'fx-space-between'}>
                             <Button
                                 onClick={cancelBtn}
                                 fontSize={'14px'}
-                                className={`${styles.addBtn} mg-rt-4`}
+                                className={`${styles.addBtn}`}
+                                width={'60px'}
                             >
                                 {'추가'}
                             </Button>
-                        </div>
-                        <div>
-                            <Input
-                                type="text"
-                                value={checkPassword}
-                                onChange={handleCheckPwChange}
-                            />
-                        </div>
-                        <div>
-                            <Input
-                                type="text"
-                                value={checkPassword}
-                                onChange={handleCheckPwChange}
-                            />
+                            <Button
+                                onClick={cancelBtn}
+                                fontSize={'14px'}
+                                className={`${styles.addBtn}`}
+                                width={'60px'}
+                            >
+                                {'삭제'}
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -154,12 +169,16 @@ const index = () => {
                     <Button
                         onClick={cancelBtn}
                         className={`${styles.loginBtn} mg-rt-4`}
+                        width={'220px'}
+                        height={'36px'}
                     >
                         {'취소'}
                     </Button>
                     <Button
                         onClick={findPwClick}
                         className={`${styles.loginBtn} mg-lf-4`}
+                        width={'220px'}
+                        height={'36px'}
                     >
                         {'찾기'}
                     </Button>
