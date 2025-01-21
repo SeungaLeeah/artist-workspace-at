@@ -8,13 +8,10 @@
 .header-logo{
     padding: 0 30px;
     border-right: 1px solid #999;
-}
-
-.menu-list-wrap{
-    padding: 0 30px;
+    cursor: pointer;
 }
 
 .menu-item{
-    padding: 0 10px;
+    padding: 0 50px;
     cursor: pointer;
 }

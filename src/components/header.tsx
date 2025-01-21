@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({
     return (
         <div className={`${styles['header-wrap']}`}>
             <div className={`medium fs-20 ${styles['header-logo']}`} onClick={()=>router.push('/menuManagement')}>Artist Workspace </div>
-            <div className={`fx-row ${styles['menu-list-wrap']}`}>
+            <div className={`fx-row`}>
                 {menu.map((item, index) => (
                     <div key={index} className={`${styles['menu-item']} ${router.pathname === item.path ? 'bold' : 'regular'}`} onClick={()=>router.push(item.path)}  style={{fontSize:fontSize}}>{item.name}</div>
                 ))}
