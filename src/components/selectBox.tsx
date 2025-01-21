@@ -25,7 +25,7 @@ const selectBox: React.FC<SelectBoxProps> = ({
     width='100px'
 }) => {
     return (
-        <div style={{height: height, width:width}} className={`${styles.selectBox} ${className}`}>
+        <div style={{height: height, width:width}} className={`${styles['select-box']} ${className}`}>
             <select
                 className={`${styles.select}`}
                 value={value}

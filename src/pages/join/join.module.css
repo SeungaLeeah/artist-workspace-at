@@ -1,6 +1,6 @@
-.joinWrap{
+.join-wrap{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,33 +10,33 @@
     width: 100%;
     border-bottom: 1px solid #999999;
 }
-.joinBox{
+.join-box{
     min-width: 500px;
 }
-.checkBtn{
+.check-btn{
     background-color: #000;
     color: white;
     width: 90px;
     height: 36px;
     border: none;
 }
-.checkBtn:hover {
+.check-btn:hover {
     background-color: #c0c0c0;
     border: none;
 }
 
-.loginBtn{
+.login-btn{
     background-color: #000;
     color: white;
     width: 100%;
     height: 42px;
     border: none;
 }
-.loginBtn:hover {
+.login-btn:hover {
     background-color: #c0c0c0;
     border: none;
 }
-.loginInfo{
+.login-info{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -45,22 +45,22 @@
     margin-bottom: 18px;
 }
 
-.lfLine{
+.lf-line{
     border-left: 1px solid #999999;
 }
-.btnWrap{
+.btn-wrap{
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
 }
-.addBtn{
+.add-btn{
     background-color: #fff;
     border: 1px solid #333;
     color: #333;
     font-weight: 600;
 }
-.addBtn:hover {
+.add-btn:hover {
     background-color: #c0c0c0;
     border: none;
 }

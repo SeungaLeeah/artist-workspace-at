@@ -3,6 +3,7 @@ import styles from './findPw.module.css';
 import Input from "../../components/input";
 import Button from "../../components/button";
 import {useRouter} from "next/router";
+import MainLayout from "../../layouts/mainLayout";
 
 const index = () => {
     const [password, setPassword] = useState('');
@@ -25,7 +26,7 @@ const index = () => {
     };
 
     return (
-        <div className={`${styles.loginWrap}`}>
+        <div className={`${styles['login-wrap']}`}>
             <div className={'loginBox'}>
                 <div className={`mg-bt-13 fs-20 bold pd-bt-4 ${styles.title}`}>비밀번호 변경하기
                 </div>
@@ -46,16 +47,16 @@ const index = () => {
                         onChange={handleCheckPwChange}
                     />
                 </div>
-                <div className={`mg-tp-14 ${styles.btnWrap}`}>
+                <div className={`mg-tp-14 ${styles['btn-wrap']}`}>
                     <Button
                         onClick={cancelBtn}
-                        className={`${styles.loginBtn} mg-rt-4`}
+                        className={`${styles['login-btn']} mg-rt-4`}
                     >
                         {'취소'}
                     </Button>
                     <Button
                         onClick={findPwClick}
-                        className={`${styles.loginBtn} mg-lf-4`}
+                        className={`${styles['login-btn']} mg-lf-4`}
                     >
                         {'찾기'}
                     </Button>
@@ -64,5 +65,7 @@ const index = () => {
         </div>
     );
 }
-
+index.getLayout = function getLayout(page: React.ReactNode) {
+    return <MainLayout showHeader={false}>{page}</MainLayout>;
+};
 export default index;

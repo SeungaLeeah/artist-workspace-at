@@ -7,17 +7,17 @@
     align-items: center;
     justify-content: center;
 }
-.buttonBg{
+.button-bg{
     background-color: #e5e5e5;
     border-color: #004085;
 }
 
-.buttonBg:focus {
+.button-bg:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.buttonBg.disabled {
+.button-bg.disabled {
     background-color: #c0c0c0;
     border-color: #c0c0c0;
     cursor: not-allowed;
@@ -28,7 +28,7 @@
     cursor: wait;
 }
 
-.loadingSpinner {
+.loading-spinner {
     border: 2px solid transparent;
     border-top: 2px solid #fff;
     border-radius: 50%;

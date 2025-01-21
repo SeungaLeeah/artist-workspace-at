@@ -29,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
             type={type}
             onClick={onClick}
             style={{fontSize:fontSize, height:height, width:width}}
-            className={`${styles.button} ${loading ? `${styles.loading}` : ''} ${disabled ? `${styles.disabled}` : ''} ${className ? className : styles.buttonBg}`}
+            className={`${styles.button} ${loading ? `${styles.loading}` : ''} ${disabled ? `${styles.disabled}` : ''} ${className ? className : styles['button-bg']}`}
             disabled={disabled || loading}
         >
             {children}

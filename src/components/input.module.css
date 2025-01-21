@@ -1,39 +1,35 @@
-.inputContainer {
+.input-container {
     display: flex;
     flex-direction: column;
 }
 
-.inputLabel {
+.input-label {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 8px;
     display: block;
 }
 
-.inputField {
+.input-field {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 12px;
 }
 
-.inputField:focus {
+.input-field:focus {
     border-color: #007bff;
     outline: none;
 }
 
-.inputError {
+.input-error {
     border-color: red;
 }
 
-.errorMessage {
+.error-message {
     color: red;
     font-size: 12px;
-}
-
-.errorMessage {
     color: #31B800;
-    font-size: 12px;
 }
 
 .required {

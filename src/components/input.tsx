@@ -31,11 +31,11 @@ const Input: React.FC<InputProps> = ({
     className,
     width=''
                                      }) => {
-    const inputClassName = `${styles.inputField} ${errorText ? styles.inputError : ''} `;
+    const inputClassName = `${styles['input-field']} ${errorText ? styles['input-error'] : ''} `;
     return (
-        <div className={`${styles.inputContainer} ${className}`} style={{width:width}}>
+        <div className={`${styles['input-container']} ${className}`} style={{width:width}}>
             {label && (
-                <label htmlFor={name} className={`${styles.inputLabel}`}>
+                <label htmlFor={name} className={`${styles['input-label']}`}>
                     {label} 
                     {required && <span className={`${styles.required}`}>*</span>}
                 </label>
@@ -51,8 +51,8 @@ const Input: React.FC<InputProps> = ({
                 required={required}
                 autoFocus={autoFocus}
             />
-            {successText && <span className={`${styles.errorMessage}`}>{successText}</span>}
-            {errorText && <span className={`${styles.errorMessage}`}>{errorText}</span>}
+            {successText && <span className={`${styles['error-message']}`}>{successText}</span>}
+            {errorText && <span className={`${styles['error-message']}`}>{errorText}</span>}
         </div>
     );
 }

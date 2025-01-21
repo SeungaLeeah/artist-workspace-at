@@ -4,6 +4,8 @@ import Input from "../../components/input";
 import Button from "../../components/button";
 import {useRouter} from "next/router";
 import SelectBox from '../../components/selectBox';
+import MainLayout from '../../layouts/mainLayout';
+
 
 const index = () => {
     const [password, setPassword] = useState('');
@@ -31,10 +33,9 @@ const index = () => {
     const findPwClick = () => {
         console.log('id 찾기')
     };
-
     return (
-        <div className={`${styles.joinWrap}`}>
-            <div className={`${styles.joinBox}`}>
+        <div className={`${styles['join-wrap']}`}>
+            <div className={`${styles['join-box']}`}>
                 <div className={`mg-bt-13 fs-20 pd-bt-4 fx-space-between ${styles.title}`}>
                     <div className={'bold'}>회원가입</div>
                     <div className={'thin fs-10'}><span className={'red'}>* </span>표시된 항목은 필수 입력 항목입니다.</div>
@@ -68,7 +69,7 @@ const index = () => {
                         <Button
                             onClick={findPwClick}
                             fontSize={'14px'}
-                            className={`mg-lf-4 ${styles.addBtn}`}
+                            className={`mg-lf-4 ${styles['add-btn']}`}
                         >
                             {'중복확인'}
                         </Button>
@@ -149,7 +150,7 @@ const index = () => {
                             <Button
                                 onClick={cancelBtn}
                                 fontSize={'14px'}
-                                className={`${styles.addBtn}`}
+                                className={`${styles['add-btn']}`}
                                 width={'60px'}
                             >
                                 {'추가'}
@@ -157,7 +158,7 @@ const index = () => {
                             <Button
                                 onClick={cancelBtn}
                                 fontSize={'14px'}
-                                className={`${styles.addBtn}`}
+                                className={`${styles['add-btn']}`}
                                 width={'60px'}
                             >
                                 {'삭제'}
@@ -165,10 +166,10 @@ const index = () => {
                         </div>
                     </div>
                 </div>
-                <div className={`mg-tp-14 ${styles.btnWrap}`}>
+                <div className={`mg-tp-14 ${styles['btn-wrap']}`}>
                     <Button
                         onClick={cancelBtn}
-                        className={`${styles.loginBtn} mg-rt-4`}
+                        className={`${styles['login-btn']} mg-rt-4`}
                         width={'220px'}
                         height={'36px'}
                     >
@@ -176,7 +177,7 @@ const index = () => {
                     </Button>
                     <Button
                         onClick={findPwClick}
-                        className={`${styles.loginBtn} mg-lf-4`}
+                        className={`${styles['login-btn']} mg-lf-4`}
                         width={'220px'}
                         height={'36px'}
                     >
@@ -187,5 +188,7 @@ const index = () => {
         </div>
     );
 }
-
+index.getLayout = function getLayout(page: React.ReactNode) {
+    return <MainLayout showHeader={false}>{page}</MainLayout>;
+};
 export default index;

@@ -3,6 +3,7 @@ import styles from './findId.module.css';
 import Input from "../../components/input";
 import Button from "../../components/button";
 import {useRouter} from "next/router";
+import MainLayout from "../../layouts/mainLayout";
 
 const index = () => {
     const [email, setEmail] = useState('');
@@ -21,7 +22,7 @@ const index = () => {
     };
 
     return (
-        <div className={`${styles.loginWrap}`}>
+        <div className={`${styles['login-wrap']}`}>
             <div className={'loginBox'}>
                 <div className={`mg-bt-13 fs-20 bold pd-bt-4 ${styles.title}`}>아이디 찾기
                 </div>
@@ -33,16 +34,16 @@ const index = () => {
                         placeholder="이메일을 입력하세요"
                     />
                 </div>
-                <div className={styles.btnWrap}>
+                <div className={styles['btn-wrap']}>
                     <Button
                         onClick={cancelBtn}
-                        className={`${styles.loginBtn} mg-rt-4`}
+                        className={`${styles['login-btn']} mg-rt-4`}
                     >
                         {'취소'}
                     </Button>
                     <Button
                         onClick={findIdClick}
-                        className={`${styles.loginBtn} mg-lf-4`}
+                        className={`${styles['login-btn']} mg-lf-4`}
                     >
                         {'찾기'}
                     </Button>
@@ -51,5 +52,7 @@ const index = () => {
         </div>
     );
 }
-
+index.getLayout = function getLayout(page: React.ReactNode) {
+    return <MainLayout showHeader={false}>{page}</MainLayout>;
+};
 export default index;
