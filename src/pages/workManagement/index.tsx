@@ -113,9 +113,9 @@ const index = () => {
                 <SelectBox options={options} placeHolder="직접입력" value={selectedOption} onChange={handleChange}/>
             </div>
             <Table columns={columns} data={data}/>
-            <div className={'center'}>
+            <div className={'center mg-tp-30'}>
                 <Pagination
-                    totalData={100}
+                    totalData={data.length}
                     pageSize={pageSize}
                     currentPage={currentPage}
                     onPageChange={handlePageChange}
