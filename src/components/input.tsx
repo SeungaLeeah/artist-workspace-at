@@ -14,6 +14,7 @@ interface InputProps {
     autoFocus?: boolean;
     className?:string;
     width?:string;
+    height?:string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -29,11 +30,12 @@ const Input: React.FC<InputProps> = ({
     required = false,
     autoFocus = false,
     className,
-    width=''
+    width='100%',
+    height='36px'
                                      }) => {
     const inputClassName = `${styles['input-field']} ${errorText ? styles['input-error'] : ''} `;
     return (
-        <div className={`${styles['input-container']} ${className}`} style={{width:width}}>
+        <div className={`${styles['input-container']} ${className}`} style={{height:height, width:width}}>
             {label && (
                 <label htmlFor={name} className={`${styles['input-label']}`}>
                     {label} 

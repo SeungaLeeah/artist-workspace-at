@@ -4,11 +4,25 @@ import Table from '../../components/table'
 import styles from '../workManagement/workManagement.module.css'
 import SelectBox from "../../components/selectBox";
 import Button from "../../components/button";
+import Pagination from "../../components/pagination";
 import {useRouter} from "next/router";
 import {WorkManagement} from '../../store/workManagement'
 import Input from "../../components/input";
 
 const index = () => {
+    const items = Array.from({length: 100}, (_, i) => `Item ${i + 1}`); // 예시 데이터
+    const pageSize = 10;
+
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page);
+    };
+
+    const currentItems = items.slice(
+        (currentPage - 1) * pageSize,
+        currentPage * pageSize
+    );
     const {
         fetchSearch,
     } = WorkManagement();
@@ -24,8 +38,8 @@ const index = () => {
         {id: 2, name: 'Jane Doe', email: 'jane@example.com'},
         {id: 3, name: 'Mark Smith', email: 'mark@example.com'},
     ];
-    const [type, setType] = useState('');
-    const [title, setTitle] = useState('');
+    const [isType, setIsType] = useState('');
+    const [isTitle, setIsTitle] = useState('');
     const [selectedOption, setSelectedOption] = useState<string>('');
     const options = ['Option 1', 'Option 2', 'Option 3'];
     const handleChange = (value: string) => {
@@ -39,23 +53,47 @@ const index = () => {
         fetchSearch(selectedOption);
     };
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>, label: string) => {
-        if (label === ' type') {
-            setType(e.target.value);
-        } else if (label === ' title') {
-            setTitle(e.target.value);
+        if (label === 'type') {
+            setIsType(e.target.value);
+
+        } else if (label === 'title') {
+            setIsTitle(e.target.value);
         }
 
     };
     return (
         <div className={'pd-40'}>
-            <div className={'bold fs-36'}>작품관리</div>
-            <div>
-                <div className={'fx-row'}>
+            <div className={'bold fs-36 mg-bt-20'}>작품관리</div>
+            <div className={'fx-space-between w-100'}>
+                <div className={'fx-row'} style={{width: '85%'}}>
+                    <div className={'fx-align-items-center w-50'}>
+                        <div className={`search-title medium fs-13 center`}>타입</div>
+                        <div className={`search-value w-100`}>
+                            <Input
+                                type="text"
+                                value={isType}
+                                onChange={(e) => handleSearchChange(e, 'type')}
+                            />
+                        </div>
+                    </div>
+                    <div className={'fx-align-items-center w-50'}>
+                        <div className={`search-title medium fs-13 center`}>제목</div>
+                        <div className={`search-value w-100`} style={{borderRight: '1px solid #ccc'}}>
+                            <Input
+                                type="text"
+                                value={isTitle}
+                                onChange={(e) => handleSearchChange(e, 'title')}
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className={'center'} style={{width: '15%'}}>
                     <Button
                         onClick={cancelBtn}
                         fontSize={'14px'}
-                        className={`${styles['add-btn']}`}
+                        className={`mg-rt-8 ${styles['add-btn']}`}
                         width={'60px'}
+                        height={'42px'}
                     >
                         {'초기화'}
                     </Button>
@@ -64,45 +102,24 @@ const index = () => {
                         fontSize={'14px'}
                         className={`${styles['add-btn']}`}
                         width={'60px'}
+                        height={'42px'}
                     >
                         {'검색'}
                     </Button>
                 </div>
-                <div className={'fx-align-items-center'}>
-                    <div>
-                        <div>타입</div>
-                        <div>
-                            <Input
-                                type="text"
-                                value={type}
-                                onChange={(e) => handleSearchChange(e, 'type')}
-                            />
-                        </div>
-                    </div>
-                    <div>
-                        <div>제목</div>
-                        <div>
-                            <Input
-                                type="text"
-                                value={type}
-                                onChange={(e) => handleSearchChange(e, 'title')}
-                            />
-                        </div>
-                    </div>
-                    <Button
-                        onClick={cancelBtn}
-                        fontSize={'14px'}
-                        className={`${styles['add-btn']}`}
-                        width={'60px'}
-                    >
-                        {'등록'}
-                    </Button>
-                </div>
             </div>
-            <div>
-                <SelectBox options={options} value={selectedOption} onChange={handleChange}/>
+            <div className={'pd-tp-20'}>
+                <SelectBox options={options} placeHolder="직접입력" value={selectedOption} onChange={handleChange}/>
             </div>
             <Table columns={columns} data={data}/>
+            <div className={'center'}>
+                <Pagination
+                    totalData={100}
+                    pageSize={pageSize}
+                    currentPage={currentPage}
+                    onPageChange={handlePageChange}
+                />
+            </div>
         </div>
     );
 };
