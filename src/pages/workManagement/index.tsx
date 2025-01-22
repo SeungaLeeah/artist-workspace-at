@@ -45,8 +45,9 @@ const index = () => {
     const handleChange = (value: string) => {
         setSelectedOption(value);
     };
-    const cancelBtn = () => {
-        router.push(`/`);
+    const handleReset = () => {
+        setIsType('');
+        setIsTitle('');
     };
     const handleSearch = async () => {
         console.log('s')
@@ -65,7 +66,7 @@ const index = () => {
         <div className={'pd-40'}>
             <div className={'bold fs-36 mg-bt-20'}>작품관리</div>
             <div className={'fx-space-between w-100'}>
-                <div className={'fx-row'} style={{width: '85%'}}>
+                <div className={'fx-row w-100'}>
                     <div className={'fx-align-items-center w-50'}>
                         <div className={`search-title medium fs-13 center`}>타입</div>
                         <div className={`search-value w-100`}>
@@ -87,9 +88,9 @@ const index = () => {
                         </div>
                     </div>
                 </div>
-                <div className={'center'} style={{width: '15%'}}>
+                <div className={'fx-right mg-lf-8'}>
                     <Button
-                        onClick={cancelBtn}
+                        onClick={handleReset}
                         fontSize={'14px'}
                         className={`mg-rt-8 ${styles['add-btn']}`}
                         width={'60px'}
