@@ -13,16 +13,10 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({
-    type = 'button',
-    onClick,
-    className = '',
     fontSize='14px',
     menu = [],
-    img='100px',
-    logoImage
 }) => {
     const router = useRouter();
-    console.log(router.pathname,'router.pathname')
     return (
         <div className={`${styles['header-wrap']}`}>
             <div className={`medium fs-20 ${styles['header-logo']}`} onClick={()=>router.push('/menuManagement')}>Artist Workspace </div>
