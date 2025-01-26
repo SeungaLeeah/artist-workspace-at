@@ -112,7 +112,7 @@ const index = () => {
             <div className={'pd-tp-20'}>
                 <SelectBox options={options} placeHolder="직접입력" value={selectedOption} onChange={handleChange}/>
             </div>
-            <Table columns={columns} data={data}/>
+            <Table columns={columns} data={data} pageRouter={'workManagement'}/>
             <div className={'center mg-tp-30'}>
                 <Pagination
                     totalData={data.length}
