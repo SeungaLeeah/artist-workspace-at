@@ -20,7 +20,7 @@ const Preview: PreviewComponent = () => {
 
     return (
         <div className={"w-100"}>
-            <div className="preview" dangerouslySetInnerHTML={{ __html: editorContent  }} />
+            <div className="preview pd-20" dangerouslySetInnerHTML={{ __html: editorContent  }} />
         </div>
     );
 };
