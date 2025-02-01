@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import 'react-quill/dist/quill.snow.css';
-
+import styles from './editor.module.css'
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 const Editor = () => {
@@ -24,7 +24,7 @@ const Editor = () => {
     };
 
     return (
-        <div className={'w-100'}>
+        <div className={`w-100`}>
             <ReactQuill
                 value={editorValue}
                 onChange={handleChange}

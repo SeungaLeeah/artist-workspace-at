@@ -3,5 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/workManagement": "pages/workManagement.js",
-  "/workManagement/[id]": "pages/workManagement/[id].js"
+  "/workManagement/detail/preview": "pages/workManagement/detail/preview.js",
+  "/workManagement/detail/[id]": "pages/workManagement/detail/[id].js"
 }

@@ -7,9 +7,10 @@ interface TableProps {
     data: Array<{ [key: string]: any }>;
     onClick?: () => void;
     pageRouter?: string;
+    pageSizeOptions?:string;
 }
 
-const Table: React.FC<TableProps> = ({ columns, data, pageRouter }: TableProps) => {
+const Table: React.FC<TableProps> = ({ columns, data, pageRouter, pageSizeOptions= 'width=800,height=600,scrollbars=yes,resizable=yes'}: TableProps) => {
     return (
         <table className={styles['table-wrap']}>
             <thead>
@@ -23,8 +24,8 @@ const Table: React.FC<TableProps> = ({ columns, data, pageRouter }: TableProps) 
             {data?.map((row, rowIndex) => (
                 <tr key={rowIndex} onClick={() => {
                     if (pageRouter) {
-                        const url = `/${pageRouter}/${row.id}`;
-                        const windowOptions = "width=800,height=600,scrollbars=yes,resizable=yes";
+                        const url = `/${pageRouter}/detail/${row.id}`;
+                        const windowOptions = pageSizeOptions;
                         window.open(url, '_blank', windowOptions); // 새 창 크기 설정
                     }
                 }}>

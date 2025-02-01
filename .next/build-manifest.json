@@ -28,10 +28,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/workManagement.js"
     ],
-    "/workManagement/[id]": [
+    "/workManagement/detail/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/workManagement/[id].js"
+      "static/chunks/pages/workManagement/detail/[id].js"
+    ],
+    "/workManagement/detail/preview": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/workManagement/detail/preview.js"
     ]
   },
   "ampFirstPages": []
