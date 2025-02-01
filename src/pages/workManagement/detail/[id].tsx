@@ -14,6 +14,8 @@ const id = () => {
     const [isType, setIsType] = useState('');
     const [isTitle, setIsTitle] = useState('');
     const options = ['Option 1', 'Option 2', 'Option 3'];
+    const [editorValue, setEditorValue] = useState('');
+
     useEffect(()=>{
         console.log(id,'id')
     })
@@ -27,6 +29,9 @@ const id = () => {
         }
 
     };
+    const handleEditorChange = (value: string) => {
+        setEditorValue(value);
+    };
     const handleChange = (value: string) => {
         setSelectedOption(value);
     };
@@ -36,8 +41,17 @@ const id = () => {
     const handleSave = () => {
         window.close();
     };
-    const handlePreview = () => {
-        window.open(`/workManagement/detail/preview?id=${id}`, '_blank');
+    const handlePreview = (editorValue: string) => {
+        const windowOptions = 'width=800,height=600,scrollbars=yes,resizable=yes';
+        const previewPage = window.open(`/workManagement/detail/preview?id=${id}`, '_blank', windowOptions);
+
+        if (previewPage) {
+            previewPage.onload = () => {
+                if (previewPage.opener) {
+                    previewPage.opener.editorValue = editorValue;
+                }
+            };
+        }
     };
     return (
         <div className={`${styles['detail-wrap']}`}>
@@ -128,7 +142,7 @@ const id = () => {
                                 <div className={`pd-lf-16 medium fs-13 fx-left`}>작품 설명</div>
                             </div>
                             <div className={`${styles['detail-table-value']} w-100 mg-tp-3 mg-bt-3`}>
-                                <Editor/>
+                                <Editor editorValue={editorValue} onChange={handleEditorChange} />
                             </div>
                         </div>
                     </div>
@@ -164,7 +178,7 @@ const id = () => {
                         {'취소'}
                     </Button>
                     <Button
-                        onClick={handlePreview}
+                        onClick={()=>handlePreview(editorValue)}
                         className={`${styles['login-btn']} mg-lf-4`}
                         width={'80px'}
                         height={'36px'}

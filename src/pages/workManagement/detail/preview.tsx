@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from 'react';
 import MainLayout from "../../../layouts/mainLayout";
 
 interface PreviewProps {
@@ -9,10 +9,18 @@ interface PreviewComponent extends React.FC<PreviewProps> {
     getLayout?: (page: React.ReactNode) => React.ReactNode;
 }
 
-const Preview: PreviewComponent = ({ editorValue }) => {
+const Preview: PreviewComponent = () => {
+    const [editorContent, setEditorContent] = useState<string>('');
+    useEffect(() => {
+        console.log(window.opener ,'window.opener ')
+        if (window.opener && window.opener.editorValue) {
+            setEditorContent(window.opener.editorValue);
+        }
+    }, []);
+
     return (
         <div className={"w-100"}>
-            <div className="preview" dangerouslySetInnerHTML={{ __html: editorValue }} />
+            <div className="preview" dangerouslySetInnerHTML={{ __html: editorContent  }} />
         </div>
     );
 };
