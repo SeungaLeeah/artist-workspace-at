@@ -50,7 +50,6 @@ const index = () => {
         setIsTitle('');
     };
     const handleSearch = async () => {
-        console.log('s')
         fetchSearch(selectedOption);
     };
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>, label: string) => {
