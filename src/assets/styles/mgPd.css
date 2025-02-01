@@ -56,6 +56,11 @@
 .mg-tp-2{
     margin-top: 2px;
 }
+
+.mg-tp-3{
+    margin-top: 3px;
+}
+
 .mg-tp-4{
     margin-top: 4px;
 }
@@ -110,6 +115,9 @@
 
 .mg-bt-2{
     margin-bottom: 2px;
+}
+.mg-bt-3{
+    margin-bottom: 3px;
 }
 .mg-bt-4{
     margin-bottom: 4px;

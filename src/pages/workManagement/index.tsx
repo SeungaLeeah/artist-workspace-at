@@ -50,7 +50,6 @@ const index = () => {
         setIsTitle('');
     };
     const handleSearch = async () => {
-        console.log('s')
         fetchSearch(selectedOption);
     };
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>, label: string) => {
@@ -112,7 +111,9 @@ const index = () => {
             <div className={'pd-tp-20'}>
                 <SelectBox options={options} placeHolder="직접입력" value={selectedOption} onChange={handleChange}/>
             </div>
-            <Table columns={columns} data={data}/>
+            <Table
+                pageSizeOptions={'width=1000,height=800,scrollbars=yes,resizable=yes'}
+                columns={columns} data={data} pageRouter={'workManagement'}/>
             <div className={'center mg-tp-30'}>
                 <Pagination
                     totalData={data.length}
