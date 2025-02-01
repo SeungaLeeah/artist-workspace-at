@@ -3,6 +3,7 @@ import MainLayout from "../../layouts/mainLayout";
 import Input from "../../components/input";
 import styles from '../workManagement/workManagement.module.css'
 import SelectBox from "../../components/selectBox";
+import Editor from "../../components/editor";
 
 const id = () => {
     const [selectedOption, setSelectedOption] = useState<string>('');
@@ -106,15 +107,13 @@ const id = () => {
                         </div>
                     </div>
                     <div className={'fx-align-items-center w-100 border-bottom'}>
+                        <div className={'fx-row h-100 w-100'}>
                         <div className={`${styles['detail-table-title']}`}>
                             <div className={`pd-lf-16 medium fs-13 fx-left`}>작품 설명</div>
                         </div>
                         <div className={`${styles['detail-table-value']} w-100`}>
-                            <Input
-                                type="text"
-                                value={isTitle}
-                                onChange={(e) => handleSearchChange(e, 'title')}
-                            />
+                            <Editor/>
+                        </div>
                         </div>
                     </div>
                     <div className={'fx-align-items-center w-100'}>
@@ -127,6 +126,7 @@ const id = () => {
                                 value={isTitle}
                                 onChange={(e) => handleSearchChange(e, 'title')}
                             />
+
                         </div>
                     </div>
                 </div>
