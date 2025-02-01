@@ -2,5 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/workManagement": "pages/workManagement.js"
+  "/": "pages/index.js",
+  "/menuManagement": "pages/menuManagement.js",
+  "/workManagement": "pages/workManagement.js",
+  "/workManagement/detail/[id]": "pages/workManagement/detail/[id].js",
+  "/workManagement/detail/preview": "pages/workManagement/detail/preview.js"
 }

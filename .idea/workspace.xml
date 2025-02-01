@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="069ce00f-06b4-48ac-bf81-ed76b5a0c28b" name="변경" comment="feature: 작품 등록 수정 적용중 및 미리보기 적용중">
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/6.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-development/6.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/chunks/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/webpack.js" afterDir="false" />
+    <list default="true" id="069ce00f-06b4-48ac-bf81-ed76b5a0c28b" name="변경" comment="feature: VCS 적용">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/0.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/0.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/index.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/index.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/index.pack.gz.old" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/index.pack.gz.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/0.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-development/0.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/1.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-development/1.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/index.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-development/index.pack.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/index.pack.gz.old" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-development/index.pack.gz.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/workManagement/detail/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/workManagement/detail/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/vendor-chunks/react-quill.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/vendor-chunks/react-quill.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/node_modules_react-quill_lib_index_js.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/node_modules_react-quill_lib_index_js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/workManagement/detail/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/pages/workManagement/detail/[id].js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="feature/작품관리" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,6 +84,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -116,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738285428417</updated>
-      <workItem from="1738285432833" duration="16868000" />
+      <workItem from="1738285432833" duration="17164000" />
     </task>
     <task id="LOCAL-00004" summary="feature: vcs 추가 파일 업로드">
       <option name="closed" value="true" />
@@ -150,7 +161,31 @@
       <option name="project" value="LOCAL" />
       <updated>1738428163793</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feature: 작품 등록 수정 적용중 및 미리보기 적용중">
+      <option name="closed" value="true" />
+      <created>1738428231704</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738428231704</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feature: VCS 적용">
+      <option name="closed" value="true" />
+      <created>1738428278957</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738428278957</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feature: VCS 적용">
+      <option name="closed" value="true" />
+      <created>1738428389646</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738428389646</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +198,7 @@
     <MESSAGE value="feature: 작품 등록 수정 적용중 및 edit 적용중" />
     <MESSAGE value="feature: 작품 등록 수정 적용중" />
     <MESSAGE value="feature: 작품 등록 수정 적용중 및 미리보기 적용중" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: 작품 등록 수정 적용중 및 미리보기 적용중" />
+    <MESSAGE value="feature: VCS 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: VCS 적용" />
   </component>
 </project>
