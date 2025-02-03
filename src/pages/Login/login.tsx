@@ -7,7 +7,6 @@ import MainLayout from "../../layouts/mainLayout";
 import index from "../join";
 
 const Login = () => {
-    console.log(process.env.NEXT_PUBLIC_BASE_URL,'process.env.NEXT_PUBLIC_BASE_URL')
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const router = useRouter();

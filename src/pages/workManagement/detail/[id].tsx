@@ -15,11 +15,6 @@ const id = () => {
     const [isTitle, setIsTitle] = useState('');
     const options = ['Option 1', 'Option 2', 'Option 3'];
     const [editorValue, setEditorValue] = useState('');
-
-    useEffect(()=>{
-        console.log(id,'id')
-    })
-
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>, label: string) => {
         if (label === 'type') {
             setIsType(e.target.value);

@@ -6,20 +6,17 @@ import SelectBox from "../../../components/selectBox";
 import Editor from "../../../components/editor";
 import Button from "../../../components/button";
 import {useRouter} from "next/router";
+import FileUploadButton from "../../../components/fileUploadButton";
 
 const id = () => {
-    const router =useRouter()
-    const { id } = router.query;
+    const router = useRouter()
+    const {id} = router.query;
     const [selectedOption, setSelectedOption] = useState<string>('');
     const [isType, setIsType] = useState('');
     const [isTitle, setIsTitle] = useState('');
     const options = ['Option 1', 'Option 2', 'Option 3'];
     const [editorValue, setEditorValue] = useState('');
-
-    useEffect(()=>{
-        console.log(id,'id')
-    })
-
+    const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>, label: string) => {
         if (label === 'type') {
             setIsType(e.target.value);
@@ -28,6 +25,10 @@ const id = () => {
             setIsTitle(e.target.value);
         }
 
+    };
+
+    const handleFileChange = (files: FileList | null) => {
+        setSelectedFiles(files);
     };
     const handleEditorChange = (value: string) => {
         setEditorValue(value);
@@ -110,7 +111,7 @@ const id = () => {
                                 <div className={`pd-lf-16 medium fs-13 fx-left`}>작품 설명</div>
                             </div>
                             <div className={`${styles['detail-table-value']} w-100 mg-tp-3 mg-bt-3`}>
-                                <Editor editorValue={editorValue} onChange={handleEditorChange} />
+                                <Editor editorValue={editorValue} onChange={handleEditorChange}/>
                             </div>
                         </div>
                     </div>
@@ -119,11 +120,17 @@ const id = () => {
                             <div className={`pd-lf-16 medium fs-13 fx-left`}>썸네일 첨부</div>
                         </div>
                         <div className={`${styles['detail-table-value']} w-100`}>
-                            <Input
-                                type="text"
-                                value={isTitle}
-                                onChange={(e) => handleSearchChange(e, 'title')}
-                            />
+                            <div>
+                                <FileUploadButton onFileChange={handleFileChange}/>
+
+                                {selectedFiles && selectedFiles.length > 0 && (
+                                    <div>
+                                        {Array.from(selectedFiles).map((file) => (
+                                            <div key={file.name}>{file.name}</div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -145,7 +152,7 @@ const id = () => {
                         {'취소'}
                     </Button>
                     <Button
-                        onClick={()=>handlePreview(editorValue)}
+                        onClick={() => handlePreview(editorValue)}
                         className={`${styles['login-btn']} mg-lf-4`}
                         width={'80px'}
                         height={'36px'}

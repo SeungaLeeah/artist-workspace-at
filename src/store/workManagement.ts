@@ -9,7 +9,6 @@ export const WorkManagement = () => {
 
     const fetchSearch = async (type: string) => {
         let query = ''
-        console.log(searchResults,'searchResults')
         setIsLoading(true);
         setError(null);
 

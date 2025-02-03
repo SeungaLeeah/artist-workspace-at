@@ -12,7 +12,6 @@ interface PreviewComponent extends React.FC<PreviewProps> {
 const Preview: PreviewComponent = () => {
     const [editorContent, setEditorContent] = useState<string>('');
     useEffect(() => {
-        console.log(window.opener ,'window.opener ')
         if (window.opener && window.opener.editorValue) {
             setEditorContent(window.opener.editorValue);
         }

@@ -12,7 +12,6 @@ interface EditorProps {
 const Editor: FC<EditorProps> = ({ editorValue, onChange }) => {
     const handleChange = (value: string) => {
         onChange(value);
-        console.log(value, 'value');
     };
 
     const modules = {
