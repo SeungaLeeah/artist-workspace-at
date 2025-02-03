@@ -11,6 +11,9 @@
 # production
 /build
 
+# Next.js 빌드 파일들 무시
+.next/
+
 # misc
 .DS_Store
 .env.local
@@ -21,3 +24,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+buildManifest.js
+*.pack.gz
